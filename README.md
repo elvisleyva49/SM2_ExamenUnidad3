@@ -30,7 +30,8 @@ SM2_ExamenUnidad3/
 └── README.md
 ```
 
-**[INSERTAR CAPTURA DE PANTALLA DE LA ESTRUCTURA DE CARPETAS AQUÍ]**
+<img width="303" height="613" alt="image" src="https://github.com/user-attachments/assets/0ecfa55c-2078-4b54-b989-e86ea917e4bd" />
+
 
 ### 2. Contenido del Archivo `quality-check.yml`
 
@@ -79,7 +80,7 @@ jobs:
         run: flutter test
 ```
 
-**[INSERTAR CAPTURA DE PANTALLA DEL ARCHIVO quality-check.yml AQUÍ]**
+<img width="580" height="820" alt="image" src="https://github.com/user-attachments/assets/f3cf1a08-34cc-4536-82e5-6056d133d3c3" />
 
 ### 3. Ejecución del Workflow en GitHub Actions
 
@@ -87,7 +88,7 @@ El workflow se ejecuta automáticamente cuando se realiza:
 - Un push a la rama `main`
 - Un pull request hacia la rama `main`
 
-**[INSERTAR CAPTURA DE PANTALLA DE LA PESTAÑA ACTIONS MOSTRANDO LA EJECUCIÓN EXITOSA AQUÍ]**
+<img width="1303" height="406" alt="image" src="https://github.com/user-attachments/assets/795b0076-bf83-4d1d-9064-d264b5027ba1" />
 
 ## Explicación de lo Realizado
 
@@ -125,6 +126,8 @@ Se implementaron **3 pruebas unitarias** en `main_test.dart` para la funcionalid
 1. **Prueba de creación exitosa:** Valida el flujo normal con datos válidos
 2. **Prueba de validación:** Verifica el manejo de campos vacíos obligatorios  
 3. **Prueba de manejo de errores:** Simula fallos en la subida de imágenes
+
+<img width="781" height="988" alt="image" src="https://github.com/user-attachments/assets/ed0b6367-20fc-43bc-8710-67f162d24f5e" />
 
 Las pruebas utilizan **mocks** para simular servicios externos, garantizando:
 - Aislamiento de la lógica de negocio
