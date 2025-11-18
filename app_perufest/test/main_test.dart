@@ -1,7 +1,6 @@
 import 'package:flutter_test/flutter_test.dart';
 import 'dart:io';
 
-// MOCK SIMULADO DEL SERVICE PARA NOTICIAS
 class MockNoticiasService {
   static bool retornarExitoso = true;
   static bool fallarSubidaImagen = false;
@@ -31,7 +30,6 @@ class MockNoticiasService {
   }
 }
 
-// VIEWMODEL DE PRUEBA PARA NOTICIAS
 enum NoticiaState { idle, loading, success, error }
 
 class NoticiasViewModelMock {
@@ -112,9 +110,7 @@ void main() {
       MockNoticiasService.fallarSubidaImagen = false;
     });
 
-    // ------------------------------------------------------------
     // 1. CREACIÓN EXITOSA DE NOTICIA (datos validos)
-    // ------------------------------------------------------------
     test('Crear noticia con datos válidos debe ser exitoso', () async {
       final resultado = await viewModel.crearNoticia(
         titulo: "Nueva Noticia de Prueba",
@@ -129,9 +125,8 @@ void main() {
       expect(viewModel.isLoading, false);
     });
 
-    // ------------------------------------------------------------
     // 2. CREACIÓN FALLIDA (campos obligatorios vacíos)
-    // ------------------------------------------------------------
+
     test('Crear noticia con campos vacíos debe fallar', () async {
       final resultado = await viewModel.crearNoticia(
         titulo: "",
@@ -145,9 +140,7 @@ void main() {
       expect(viewModel.isLoading, false);
     });
 
-    // ------------------------------------------------------------
     // 3. ERROR EN SUBIDA DE IMAGEN
-    // ------------------------------------------------------------
     test('Error en subida de imagen debe manejar el fallo correctamente', () async {
       // Configurar mock para que falle la subida de imagen
       MockNoticiasService.fallarSubidaImagen = true;
